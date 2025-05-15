@@ -8,6 +8,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import POS from "./pages/POS";
 import NotFound from "./pages/NotFound";
+import Inventory from "./pages/Inventory";
+import Reservations from "./pages/Reservations";
+import Staff from "./pages/Staff";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
+import Authentication from "./pages/Authentication";
 
 const queryClient = new QueryClient();
 
@@ -20,12 +26,12 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/pos" element={<POS />} />
-          {/* Rutas adicionales que se implementarán posteriormente */}
-          <Route path="/reservations" element={<div>Próximamente: Módulo de Reservas</div>} />
-          <Route path="/inventory" element={<div>Próximamente: Módulo de Inventario</div>} />
-          <Route path="/staff" element={<div>Próximamente: Módulo de Personal</div>} />
-          <Route path="/reports" element={<div>Próximamente: Módulo de Reportes</div>} />
-          <Route path="/settings" element={<div>Próximamente: Módulo de Configuración</div>} />
+          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/staff" element={<Staff />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/auth" element={<Authentication />} />
           {/* Ruta 404 para manejar rutas no existentes */}
           <Route path="*" element={<NotFound />} />
         </Routes>
